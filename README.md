@@ -70,7 +70,13 @@ Search API (used by the page's JavaScript):
   (`fail("Not implemented yet")`) until you complete it. The other stubs are empty and pass until you
   fill them in.
 
-## 5. Part 3: JMeter
+## 5. Fixing the bug you report (Question 3)
+
+The search filter lives in `src/main/java/jobsportal/JobRepository.java`, method `search`. After you
+have written your bug report, fix it there and rerun `./gradlew cleanTestQ2 testQ2`; all tests
+should pass.
+
+## 6. Part 3: JMeter
 
 Install JMeter (needs a Java runtime): download the current stable **binary** release from
 https://jmeter.apache.org/download_jmeter.cgi, unzip it, and add its `bin/` folder to your `PATH`.

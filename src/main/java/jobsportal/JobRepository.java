@@ -57,9 +57,6 @@ public class JobRepository {
     /**
      * Required behaviour: titles containing the keyword (case-insensitive) AND location equal
      * to the location; a blank keyword or location means "do not filter on that field".
-     *
-     * SEEDED DEFECT (Part 2, Q3): when both keyword and location are supplied, the location
-     * filter is ignored. Do not fix on main or solution.
      */
     public List<Job> search(String keyword, String location) {
         String k = keyword == null ? "" : keyword.trim().toLowerCase();
