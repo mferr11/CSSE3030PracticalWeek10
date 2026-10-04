@@ -1,0 +1,14 @@
+.gradle/
+build/
+bin/
+out/
+.idea/
+*.iml
+.vscode/
+!gradle/wrapper/gradle-wrapper.jar
+
+# JMeter output
+jmeter/results/
+*.jtl
+results-*.jtl
+report-*/

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JobsPortal</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>JobsPortal</h1>
+  <div class="row">
+    <div>
+      <label for="keyword">Keyword</label>
+      <input id="keyword" name="keyword" type="text">
+    </div>
+    <div>
+      <label for="location">Location</label>
+      <input id="location" name="location" type="text">
+    </div>
+    <button type="button" data-testid="search-button" id="search-button">Search</button>
+  </div>
+  <p id="message" data-testid="message" role="status"></p>
+  <div id="results" data-testid="results" hidden></div>
+  <script src="/search.js"></script>
+</body>
+</html>

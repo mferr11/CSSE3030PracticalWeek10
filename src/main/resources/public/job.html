@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{title}} - JobsPortal</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <p><a href="/">&larr; Back to search</a></p>
+  <h1>{{title}}</h1>
+  <p>{{location}}</p>
+  <p>{{description}}</p>
+  <button type="button" id="{{applyId}}" data-testid="apply-button">Apply</button>
+  <p id="message" data-testid="message" role="status"></p>
+  <form class="application" data-testid="application-form" hidden>
+    <label for="name">Full name</label>
+    <input id="name" name="name" type="text" required>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+    <p><button type="submit">Submit application</button></p>
+  </form>
+  <script src="/apply.js"></script>
+</body>
+</html>

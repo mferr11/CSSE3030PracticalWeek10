@@ -1,0 +1,13 @@
+[hidden] { display: none !important; }
+body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+h1 { margin-bottom: 1rem; }
+.row { display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap; }
+label { display: block; font-size: .85rem; margin-bottom: .2rem; }
+input { padding: .45rem; font-size: 1rem; }
+button { padding: .5rem 1rem; font-size: 1rem; cursor: pointer; }
+.job-card { border: 1px solid #ccc; border-radius: 6px; padding: .75rem 1rem; margin: .6rem 0; cursor: pointer; }
+.job-card:hover { background: #f4f8ff; }
+.job-title { font-weight: 600; }
+.job-location { color: #555; }
+#message { min-height: 1.5rem; margin: 1rem 0 .5rem; }
+form.application label { margin-top: .6rem; }
