@@ -1,66 +1,31 @@
-# JobsPortal: Week 10 practical (UI and performance testing)
+# CSSE3030 Week 10 Practical: UI and Performance Testing
 
-Starter code for the Week 10 practical. Follow the worksheet for what to do.
+Selenium UI tests and JMeter load tests, using the `JobsPortal` app as the subject.
 
-## Get the code
-
-```bash
-git clone https://github.com/mferr11/CSSE3030PracticalWeek10.git
-cd CSSE3030PracticalWeek10
-```
-
-You work on the `main` branch. The `solution` branch is for tutors.
+The search filter contains a deliberate bug (`src/main/java/jobsportal/JobRepository.java`).
+The point of the exercise is to write tests that catch it yourself.
 
 ## Requirements
 
-| Requirement | Used for | Where to get it |
-|---|---|---|
-| JDK 17 or newer (21 tested; `java -version`) | everything | https://adoptium.net |
-| Git | cloning the repo | https://git-scm.com |
-| Google Chrome | Part 2 (Selenium) | https://www.google.com/chrome |
-| Apache JMeter 5.6.x, with `bin` on your `PATH` (`jmeter --version`) | Part 3 (load testing) | https://jmeter.apache.org/download_jmeter.cgi |
+- JDK 17 or newer (Gradle is not needed; use the `./gradlew` wrapper)
+- Git
+- Google Chrome (internet on your first Selenium run, to fetch the driver)
+- JMeter 5.6.x with `bin` on your `PATH` (`jmeter --version`)
 
-- **Gradle**: not needed. Use the wrapper: `./gradlew` (PowerShell, Linux, macOS) or `gradlew.bat` (Command Prompt).
-- **ChromeDriver**: Selenium Manager downloads it on the first run, so that run needs internet access.
-- **Linux/macOS**: if you get `Permission denied`, run `chmod +x gradlew`, and `chmod +x <jmeter>/bin/jmeter` for JMeter.
+On Linux/macOS run `chmod +x gradlew` if you get `Permission denied`.
+On Windows use `./gradlew` in PowerShell or `gradlew.bat` in Command Prompt.
 
-Check your setup:
+## Running
 
-```bash
-./gradlew -q javaToolchains     # must list a JDK 17 or newer
-./gradlew build -x test         # must end with BUILD SUCCESSFUL
-```
+| Command | Runs |
+|---|---|
+| `./gradlew build -x test` | Check your setup (must end with `BUILD SUCCESSFUL`) |
+| `./gradlew testQ2` | Part 2: Selenium tests (rerun with `./gradlew cleanTestQ2 testQ2`) |
+| `./gradlew run` | Starts the app on port 8080 for Part 3 |
+| `jmeter -t jmeter/search-load.jmx` | Part 3: open the load test plan (run from the repo root) |
 
-## Part 2: Selenium tests
-
-The search filter lives in `src/main/java/jobsportal/JobRepository.java`.
+Do not run `./gradlew run` while running `testQ2`: both use port 8080.
 
 ```bash
-./gradlew testQ2                # run the tests
-./gradlew cleanTestQ2 testQ2    # rerun (forces the tests to run again)
+git clone https://github.com/mferr11/CSSE3030PracticalWeek10.git
 ```
-
-Do not run `./gradlew run` at the same time: both use port 8080, and the tests start the app themselves.
-
-## Part 3: JMeter load tests
-
-Start the app in one terminal and leave it running:
-
-```bash
-./gradlew run
-```
-
-GUI, from the repo root (the `WARN StatusConsoleListener` lines are harmless):
-
-```bash
-jmeter -t jmeter/search-load.jmx
-```
-
-Non-GUI runs, from the `jmeter` folder:
-
-```bash
-cd jmeter
-jmeter -n -t search-load.jmx -Jthreads=20 -l results-20.jtl -e -o report-20
-```
-
-`-o` needs a new or empty folder, so delete the old report folder (and `.jtl` file) before re-running.
