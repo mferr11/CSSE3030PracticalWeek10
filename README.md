@@ -1,19 +1,16 @@
 # CSSE3030 Week 10 Practical: UI and Performance Testing
 
-Selenium UI tests and JMeter load tests, using the `JobsPortal` app as the subject.
+Selenium performs UI tests and JMeter performs load tests, using the `JobsPortal` app as the subject.
 
 The search filter contains a deliberate bug (`src/main/java/jobsportal/JobRepository.java`).
 The point of the exercise is to write tests that catch it yourself.
 
 ## Requirements
 
-- JDK 17 or newer (Gradle is not needed; use the `./gradlew` wrapper)
-- Git
+- JDK 17 or newer
 - Google Chrome (internet on your first Selenium run, to fetch the driver)
-- JMeter 5.6.x with `bin` on your `PATH` (`jmeter --version`)
+- JMeter 5.6.3 with `bin` on your `PATH` (`jmeter --version`)
 
-On Linux/macOS run `chmod +x gradlew` if you get `Permission denied`.
-On Windows use `./gradlew` in PowerShell or `gradlew.bat` in Command Prompt.
 
 ## Running
 
