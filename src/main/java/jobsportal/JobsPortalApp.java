@@ -139,7 +139,7 @@ public class JobsPortalApp {
                     .result("<h1>Job not found</h1><a href=\"/\">Back to search</a>");
             return;
         }
-        // TRAP (Part 2, Q4): the Apply button id gets a new random suffix on every page load.
+        // The Apply button id gets a new random suffix on every page load.
         String applyId = "apply-" + Long.toString(ThreadLocalRandom.current().nextLong(0x10000000L, 0xFFFFFFFFL), 16);
         String html = resource("/public/job.html")
                 .replace("{{title}}", escape(job.get().title()))
