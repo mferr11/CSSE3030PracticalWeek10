@@ -79,5 +79,4 @@ class JobSearchTest {
         // TODO (Question 3): search for keyword "Engineer" and location "Brisbane" and check that
         // every job card shows location "Brisbane".
     }
-
 }
