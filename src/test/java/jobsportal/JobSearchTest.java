@@ -70,13 +70,13 @@ class JobSearchTest {
 
     @Test
     void blankSearchShowsMessageAndNoResults() {
-        // TODO (Part 2 Question 2): leave both fields blank, click Search, and check that the message
+        // TODO (Part 2 Question 3): leave both fields blank, click Search, and check that the message
         // "Enter a keyword or location" is shown and the results container stays hidden.
     }
 
     @Test
     void keywordAndLocationReturnsOnlyThatLocation() {
-        // TODO (Question 3): search for keyword "Engineer" and location "Brisbane" and check that
+        // TODO (Part 2 Question 3): search for keyword "Engineer" and location "Brisbane" and check that
         // every job card shows location "Brisbane".
     }
 }
