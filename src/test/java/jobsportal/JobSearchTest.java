@@ -80,11 +80,4 @@ class JobSearchTest {
         // every job card shows location "Brisbane".
     }
 
-    // ---------------------------------------------------------------- Question 4
-
-    @Test
-    void applyShowsApplicationForm() {
-        // TODO (Question 4): search, open the first job card, click Apply and check that the
-        // application form (data-testid="application-form") is displayed.
-    }
 }
