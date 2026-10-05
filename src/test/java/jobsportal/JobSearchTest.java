@@ -54,7 +54,7 @@ class JobSearchTest {
         }
     }
 
-    // ---------------------------------------------------------------- Question 2
+    // ---------------------------------------------------------------- Part 2 Question 1
 
     @Test
     void keywordSearchShowsMatchingJobs() {
@@ -66,11 +66,11 @@ class JobSearchTest {
         fail("Not implemented yet");
     }
 
-    // ---------------------------------------------------------------- Question 3
+    // ---------------------------------------------------------------- Part 2 Question 3
 
     @Test
     void blankSearchShowsMessageAndNoResults() {
-        // TODO (Question 3): leave both fields blank, click Search, and check that the message
+        // TODO (Part 2 Question 2): leave both fields blank, click Search, and check that the message
         // "Enter a keyword or location" is shown and the results container stays hidden.
     }
 

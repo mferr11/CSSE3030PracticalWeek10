@@ -17,7 +17,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
- * Question 2: this test is flaky. Run it several times, explain why, and fix it.
+ * Part 2 Question 2: this test is flaky. Run it several times, explain why, and fix it.
  */
 class FlakySearchTest {
 
