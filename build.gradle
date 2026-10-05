@@ -50,6 +50,7 @@ tasks.register('testQ2', Test) {
     testClassesDirs = sourceSets.test.output.classesDirs
     classpath = sourceSets.test.runtimeClasspath
     useJUnitPlatform()
+    outputs.upToDateWhen { false }   // always rerun, so no cleanTestQ2 is needed
     filter {
         includeTestsMatching 'jobsportal.JobSearchTest'
         includeTestsMatching 'jobsportal.FlakySearchTest'

@@ -17,7 +17,7 @@ The point of the exercise is to write tests that catch it yourself.
 | Command | Runs |
 |---|---|
 | `./gradlew build -x test` | Check your setup (must end with `BUILD SUCCESSFUL`) |
-| `./gradlew testQ2` | Part 2: Selenium tests (rerun with `./gradlew cleanTestQ2 testQ2`) |
+| `./gradlew testQ2` | Part 2: Selenium tests |
 | `./gradlew run` | Starts the app on port 8080 for Part 3 |
 | `jmeter -t jmeter/search-load.jmx` | Part 3: open the load test plan (run from the repo root) |
 
