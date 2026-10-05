@@ -9,6 +9,7 @@ out/
 
 # JMeter output
 jmeter/results/
+jmeter.log
 *.jtl
 results-*.jtl
 report-*/
